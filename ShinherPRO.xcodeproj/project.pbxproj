@@ -1,0 +1,594 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		227F62332A6C2B8300610636 /* ShinherPROApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227F62322A6C2B8300610636 /* ShinherPROApp.swift */; };
+		227F62352A6C2B8300610636 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227F62342A6C2B8300610636 /* ContentView.swift */; };
+		227F62372A6C2B8400610636 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 227F62362A6C2B8400610636 /* Assets.xcassets */; };
+		227F623A2A6C2B8400610636 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 227F62392A6C2B8400610636 /* Preview Assets.xcassets */; };
+		227F62442A6C2B8400610636 /* ShinherPROTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227F62432A6C2B8400610636 /* ShinherPROTests.swift */; };
+		227F624E2A6C2B8400610636 /* ShinherPROUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227F624D2A6C2B8400610636 /* ShinherPROUITests.swift */; };
+		227F62502A6C2B8400610636 /* ShinherPROUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227F624F2A6C2B8400610636 /* ShinherPROUITestsLaunchTests.swift */; };
+		228542412A70130200A71D3B /* mainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228542402A70130200A71D3B /* mainPage.swift */; };
+		228542472A74AAD600A71D3B /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228542462A74AAD600A71D3B /* LoginPage.swift */; };
+		228542492A74ABA100A71D3B /* MianPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228542482A74ABA100A71D3B /* MianPage.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		227F62402A6C2B8400610636 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 227F62272A6C2B8300610636 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 227F622E2A6C2B8300610636;
+			remoteInfo = ShinherPRO;
+		};
+		227F624A2A6C2B8400610636 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 227F62272A6C2B8300610636 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 227F622E2A6C2B8300610636;
+			remoteInfo = ShinherPRO;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		227F622F2A6C2B8300610636 /* ShinherPRO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShinherPRO.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		227F62322A6C2B8300610636 /* ShinherPROApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShinherPROApp.swift; sourceTree = "<group>"; };
+		227F62342A6C2B8300610636 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		227F62362A6C2B8400610636 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		227F62392A6C2B8400610636 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		227F623F2A6C2B8400610636 /* ShinherPROTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShinherPROTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		227F62432A6C2B8400610636 /* ShinherPROTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShinherPROTests.swift; sourceTree = "<group>"; };
+		227F62492A6C2B8400610636 /* ShinherPROUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShinherPROUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		227F624D2A6C2B8400610636 /* ShinherPROUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShinherPROUITests.swift; sourceTree = "<group>"; };
+		227F624F2A6C2B8400610636 /* ShinherPROUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShinherPROUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		228542402A70130200A71D3B /* mainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainPage.swift; sourceTree = "<group>"; };
+		228542462A74AAD600A71D3B /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
+		228542482A74ABA100A71D3B /* MianPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MianPage.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		227F622C2A6C2B8300610636 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		227F623C2A6C2B8400610636 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		227F62462A6C2B8400610636 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		227F62262A6C2B8300610636 = {
+			isa = PBXGroup;
+			children = (
+				228542482A74ABA100A71D3B /* MianPage.swift */,
+				227F62312A6C2B8300610636 /* ShinherPRO */,
+				227F62422A6C2B8400610636 /* ShinherPROTests */,
+				227F624C2A6C2B8400610636 /* ShinherPROUITests */,
+				227F62302A6C2B8300610636 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		227F62302A6C2B8300610636 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				227F622F2A6C2B8300610636 /* ShinherPRO.app */,
+				227F623F2A6C2B8400610636 /* ShinherPROTests.xctest */,
+				227F62492A6C2B8400610636 /* ShinherPROUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		227F62312A6C2B8300610636 /* ShinherPRO */ = {
+			isa = PBXGroup;
+			children = (
+				227F62322A6C2B8300610636 /* ShinherPROApp.swift */,
+				227F62342A6C2B8300610636 /* ContentView.swift */,
+				228542462A74AAD600A71D3B /* LoginPage.swift */,
+				227F62362A6C2B8400610636 /* Assets.xcassets */,
+				227F62382A6C2B8400610636 /* Preview Content */,
+				228542402A70130200A71D3B /* mainPage.swift */,
+			);
+			path = ShinherPRO;
+			sourceTree = "<group>";
+		};
+		227F62382A6C2B8400610636 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				227F62392A6C2B8400610636 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		227F62422A6C2B8400610636 /* ShinherPROTests */ = {
+			isa = PBXGroup;
+			children = (
+				227F62432A6C2B8400610636 /* ShinherPROTests.swift */,
+			);
+			path = ShinherPROTests;
+			sourceTree = "<group>";
+		};
+		227F624C2A6C2B8400610636 /* ShinherPROUITests */ = {
+			isa = PBXGroup;
+			children = (
+				227F624D2A6C2B8400610636 /* ShinherPROUITests.swift */,
+				227F624F2A6C2B8400610636 /* ShinherPROUITestsLaunchTests.swift */,
+			);
+			path = ShinherPROUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		227F622E2A6C2B8300610636 /* ShinherPRO */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 227F62532A6C2B8400610636 /* Build configuration list for PBXNativeTarget "ShinherPRO" */;
+			buildPhases = (
+				227F622B2A6C2B8300610636 /* Sources */,
+				227F622C2A6C2B8300610636 /* Frameworks */,
+				227F622D2A6C2B8300610636 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShinherPRO;
+			productName = ShinherPRO;
+			productReference = 227F622F2A6C2B8300610636 /* ShinherPRO.app */;
+			productType = "com.apple.product-type.application";
+		};
+		227F623E2A6C2B8400610636 /* ShinherPROTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 227F62562A6C2B8400610636 /* Build configuration list for PBXNativeTarget "ShinherPROTests" */;
+			buildPhases = (
+				227F623B2A6C2B8400610636 /* Sources */,
+				227F623C2A6C2B8400610636 /* Frameworks */,
+				227F623D2A6C2B8400610636 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				227F62412A6C2B8400610636 /* PBXTargetDependency */,
+			);
+			name = ShinherPROTests;
+			productName = ShinherPROTests;
+			productReference = 227F623F2A6C2B8400610636 /* ShinherPROTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		227F62482A6C2B8400610636 /* ShinherPROUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 227F62592A6C2B8400610636 /* Build configuration list for PBXNativeTarget "ShinherPROUITests" */;
+			buildPhases = (
+				227F62452A6C2B8400610636 /* Sources */,
+				227F62462A6C2B8400610636 /* Frameworks */,
+				227F62472A6C2B8400610636 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				227F624B2A6C2B8400610636 /* PBXTargetDependency */,
+			);
+			name = ShinherPROUITests;
+			productName = ShinherPROUITests;
+			productReference = 227F62492A6C2B8400610636 /* ShinherPROUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		227F62272A6C2B8300610636 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					227F622E2A6C2B8300610636 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					227F623E2A6C2B8400610636 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 227F622E2A6C2B8300610636;
+					};
+					227F62482A6C2B8400610636 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 227F622E2A6C2B8300610636;
+					};
+				};
+			};
+			buildConfigurationList = 227F622A2A6C2B8300610636 /* Build configuration list for PBXProject "ShinherPRO" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 227F62262A6C2B8300610636;
+			productRefGroup = 227F62302A6C2B8300610636 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				227F622E2A6C2B8300610636 /* ShinherPRO */,
+				227F623E2A6C2B8400610636 /* ShinherPROTests */,
+				227F62482A6C2B8400610636 /* ShinherPROUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		227F622D2A6C2B8300610636 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				227F623A2A6C2B8400610636 /* Preview Assets.xcassets in Resources */,
+				227F62372A6C2B8400610636 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		227F623D2A6C2B8400610636 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		227F62472A6C2B8400610636 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		227F622B2A6C2B8300610636 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				228542472A74AAD600A71D3B /* LoginPage.swift in Sources */,
+				227F62352A6C2B8300610636 /* ContentView.swift in Sources */,
+				228542412A70130200A71D3B /* mainPage.swift in Sources */,
+				228542492A74ABA100A71D3B /* MianPage.swift in Sources */,
+				227F62332A6C2B8300610636 /* ShinherPROApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		227F623B2A6C2B8400610636 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				227F62442A6C2B8400610636 /* ShinherPROTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		227F62452A6C2B8400610636 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				227F62502A6C2B8400610636 /* ShinherPROUITestsLaunchTests.swift in Sources */,
+				227F624E2A6C2B8400610636 /* ShinherPROUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		227F62412A6C2B8400610636 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 227F622E2A6C2B8300610636 /* ShinherPRO */;
+			targetProxy = 227F62402A6C2B8400610636 /* PBXContainerItemProxy */;
+		};
+		227F624B2A6C2B8400610636 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 227F622E2A6C2B8300610636 /* ShinherPRO */;
+			targetProxy = 227F624A2A6C2B8400610636 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		227F62512A6C2B8400610636 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		227F62522A6C2B8400610636 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		227F62542A6C2B8400610636 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ShinherPRO/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = TYAI.ShinherPRO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		227F62552A6C2B8400610636 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ShinherPRO/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = TYAI.ShinherPRO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		227F62572A6C2B8400610636 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = TYAI.ShinherPROTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShinherPRO.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ShinherPRO";
+			};
+			name = Debug;
+		};
+		227F62582A6C2B8400610636 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = TYAI.ShinherPROTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShinherPRO.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ShinherPRO";
+			};
+			name = Release;
+		};
+		227F625A2A6C2B8400610636 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = TYAI.ShinherPROUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ShinherPRO;
+			};
+			name = Debug;
+		};
+		227F625B2A6C2B8400610636 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = TYAI.ShinherPROUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ShinherPRO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		227F622A2A6C2B8300610636 /* Build configuration list for PBXProject "ShinherPRO" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				227F62512A6C2B8400610636 /* Debug */,
+				227F62522A6C2B8400610636 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		227F62532A6C2B8400610636 /* Build configuration list for PBXNativeTarget "ShinherPRO" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				227F62542A6C2B8400610636 /* Debug */,
+				227F62552A6C2B8400610636 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		227F62562A6C2B8400610636 /* Build configuration list for PBXNativeTarget "ShinherPROTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				227F62572A6C2B8400610636 /* Debug */,
+				227F62582A6C2B8400610636 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		227F62592A6C2B8400610636 /* Build configuration list for PBXNativeTarget "ShinherPROUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				227F625A2A6C2B8400610636 /* Debug */,
+				227F625B2A6C2B8400610636 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 227F62272A6C2B8300610636 /* Project object */;
+}
