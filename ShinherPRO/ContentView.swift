@@ -13,17 +13,19 @@ class LoginPageViewModel: ObservableObject {
 
 struct ContentView: View {
     @State var changeToMain = false
+    @State var gradeDataTitle:[String] = []
+    @State var gradeDataScore:[String] = []
     var body: some View {
         ZStack {
             TabView{
-                MainPage()
+                MainPage(gradeDataTitle:$gradeDataTitle,gradeDataScore: $gradeDataScore)
                     .opacity(changeToMain ? 1 : 0)
                     .animation(.easeInOut(duration: 0.7), value: changeToMain)
                     .tabItem{
                         Image(systemName: "filemenu.and.selection")
                     }
             }
-            LoginPage(changeToMain: self.$changeToMain)
+            LoginPage(changeToMain: self.$changeToMain, gradeDataTitle:$gradeDataTitle,gradeDataScore:$gradeDataScore)
                 .opacity(changeToMain ? 0 : 1)
                 .offset(y: changeToMain ? -UIScreen.main.bounds.height : 0)
                 .animation(.easeInOut(duration: 0.7), value: changeToMain)

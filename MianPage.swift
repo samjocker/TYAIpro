@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MainPage: View {
+    @Binding var gradeDataTitle:[String]
+    @Binding var gradeDataScore:[String]
     var body: some View {
         GeometryReader{ geo in
             NavigationView{
@@ -19,28 +21,29 @@ struct MainPage: View {
                                 .font(.system(size: 26))
                                 .fontWeight(.medium)
                         }.padding(.leading,geo.size.width*(-0.45))
-//                        ForEach(sharedData.subjects, id: \.self) { subject in
-//                            NavigationLink {
-//                                Text("hello")
-//                            } label: {
-//                                MainPageFunc(titleText: "分數",widthSize: Float(geo.size.width),heightSize: Float(geo.size.height),subTitleText:subject)
-//                            }
-//                        }
-                        ForEach(1..<8) { i in
-                            if i == 2 || i == 4 {
-                                NavigationLink {
-                                    Text("hello")
-                                } label: {
-                                    MainPageFunc(titleText: "分數",widthSize: Float(geo.size.width),heightSize: Float(geo.size.height),subTitleText:"國文")
-                                }
-                            }else{
-                                NavigationLink {
-                                    Text("hello")
-                                } label: {
-                                    MainPageFunc(titleText: "分數",widthSize: Float(geo.size.width),heightSize: Float(geo.size.height),subTitleText:"")
-                                }
+//                        gradeDataTitle, id: \.self
+                        ForEach(0..<gradeDataScore.count, id:\.self) { num in
+                            NavigationLink {
+                                Text("hello")
+                            } label: {
+                                MainPageFunc(titleText: "分數",gradeScore: gradeDataScore[num],widthSize: Float(geo.size.width),heightSize: Float(geo.size.height),subTitleText:gradeDataTitle[num])
                             }
                         }
+//                        ForEach(1..<8) { i in
+//                            if i == 2 || i == 4 {
+//                                NavigationLink {
+//                                    Text("hello")
+//                                } label: {
+//                                    MainPageFunc(titleText: "分數",widthSize: Float(geo.size.width),heightSize: Float(geo.size.height),subTitleText:"國文")
+//                                }
+//                            }else{
+//                                NavigationLink {
+//                                    Text("hello")
+//                                } label: {
+//                                    MainPageFunc(titleText: "分數",widthSize: Float(geo.size.width),heightSize: Float(geo.size.height),subTitleText:"")
+//                                }
+//                            }
+//                        }
                     }.navigationBarTitle(Text("首頁"))
                 }
             }
@@ -51,7 +54,7 @@ struct MainPage: View {
 struct MainPage_Previews: PreviewProvider {
     static var previews: some View {
         TabView{
-            MainPage()
+            MainPage(gradeDataTitle: .constant(["國語文",""]),gradeDataScore: .constant(["62","70"]))
                 .tabItem{
                     Image(systemName: "filemenu.and.selection")
                 }
@@ -63,10 +66,10 @@ struct MainPageFunc:View{
     @Environment(\.colorScheme) var colorScheme
     
     var titleText:String
+    var gradeScore:String
     var widthSize:Float
     var heightSize:Float
     var subTitleText:String
-    
     
     var body: some View{
         ZStack(alignment: .top){
@@ -78,7 +81,7 @@ struct MainPageFunc:View{
                 .shadow(color: .gray.opacity(0.1), radius: 20, x: 0, y: 0)
             VStack(alignment: .leading){
                 HStack{
-                    Label("國語文",systemImage: "text.book.closed.fill")
+                    Label(titleText,systemImage: "text.book.closed.fill")
                         .foregroundColor(Color(red: 0.0, green: 0.803921568627451, blue: 0.803921568627451))
                     Spacer()
                     Image(systemName: "chevron.forward")
@@ -92,7 +95,7 @@ struct MainPageFunc:View{
                 }
                 VStack(alignment: .leading){
                     HStack{
-                        Text("54")
+                        Text(gradeScore)
                             .font(.system(size: 36,design: .rounded))
                             .foregroundColor(.primary)
                             .fontWeight(.bold)

@@ -24,6 +24,8 @@ struct LoginPage: View{
     @State private var isEditingPassword = false
     @FocusState private var box: InputBox?
     @ObservedObject var viewModel = LoginPageViewModel()
+    @Binding var gradeDataTitle:[String]
+    @Binding var gradeDataScore:[String]
     
     var body: some View {
 
@@ -204,11 +206,11 @@ struct LoginPage: View{
                             // 檢查 "code" 是否為 0，如果是則視為登入成功
                             if response.code == 0 {
                                 DispatchQueue.main.async {
-                                    print(response.examScores)
-//                                    for score in response.examScores {
-//                                        gradeData.append(score.examSubject)
-//                                    }
-//                                    print(gradeData)
+                                    for score in response.examScores {
+                                        gradeDataTitle.append(score.examSubject)
+                                        gradeDataScore.append(score.personalScore)
+                                        print(gradeDataScore)
+                                    }
                                     
                                 }
                                 self.loginPass = true
@@ -239,6 +241,6 @@ struct LoginPage: View{
 
 struct LoginPage_Previews: PreviewProvider{
     static var previews: some View{
-        LoginPage(changeToMain: .constant(true))
+        LoginPage(changeToMain: .constant(true),gradeDataTitle: .constant([]),gradeDataScore: .constant([]))
     }
 }
