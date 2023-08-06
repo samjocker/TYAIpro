@@ -76,41 +76,48 @@ struct MainPageFunc:View{
                 .background(colorScheme == .dark ? Color.gray.opacity(0.3) : Color.white)
                 .cornerRadius(CGFloat(18))
                 .shadow(color: .gray.opacity(0.1), radius: 20, x: 0, y: 0)
-            HStack{
-                Label("國語文",systemImage: "text.book.closed.fill")
-                    .foregroundColor(Color(red: 0.0, green: 0.803921568627451, blue: 0.803921568627451))
-                Spacer()
-                Image(systemName: "chevron.forward")
-                    .foregroundColor(Color.gray)
-            }
-            .padding(.horizontal,40)
-            .padding(.top,15)
             VStack(alignment: .leading){
                 HStack{
-                    Text("54")
-                        .font(.system(size: 36,design: .rounded))
-                        .foregroundColor(.primary)
-                        .fontWeight(.bold)
-                    Text("分")
-                        .font(.system(size: 20))
-                        .foregroundColor(.secondary)
-                        .fontWeight(.medium)
-                        .padding(.top,10)
+                    Label("國語文",systemImage: "text.book.closed.fill")
+                        .foregroundColor(Color(red: 0.0, green: 0.803921568627451, blue: 0.803921568627451))
+                    Spacer()
+                    Image(systemName: "chevron.forward")
+                        .foregroundColor(Color.gray)
+                }.padding(.top,15)
+//                .border(Color.blue,width:4)
+                if subTitleText == ""{
+                    Rectangle()
+                        .frame(height: 1)
+                        .foregroundColor(.black.opacity(0))
                 }
-//                .padding(.trailing,(CGFloat(widthSize)-40)*(0.66)).padding(.bottom,subTitleText != "" ? -12:0)
-                if subTitleText != ""{
-                    Text(subTitleText)
-                        .foregroundColor(.secondary)
-                        .font(.system(size: 18))
-                        .frame(width: CGFloat(widthSize)*(0.6),height: 24,alignment: .leading)
-                        .padding(.leading,2)
-                        .background(Rectangle().fill(Color.blue.opacity(0)))
-//                        .padding(.bottom,-4)
+                VStack(alignment: .leading){
+                    HStack{
+                        Text("54")
+                            .font(.system(size: 36,design: .rounded))
+                            .foregroundColor(.primary)
+                            .fontWeight(.bold)
+                        Text("分")
+                            .font(.system(size: 20))
+                            .foregroundColor(.secondary)
+                            .fontWeight(.medium)
+                            .padding(.top,10)
+                    }.padding(.top,-4)
+                    if subTitleText != ""{
+                        Text(subTitleText)
+                            .foregroundColor(.secondary)
+                            .font(.system(size: 18))
+                            .padding(.leading,2)
+                            .padding(.top,-28)
+                            .background(Rectangle().fill(Color.blue.opacity(0)))
+                    }
                 }
-            }.border(Color.red,width: 5)
-//            .padding(.bottom,-42)
-        }
-//        .padding(.bottom,-8)
+//                .border(Color.red,width: 5)
+            }.padding(.horizontal,40)
+            
+        }.padding(.vertical,0)
+        .frame(height: 120)
+//        .border(Color.yellow,width:4)
+        
     }
 }
 
