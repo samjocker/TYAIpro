@@ -15,10 +15,14 @@ struct ContentView: View {
     @State var changeToMain = false
     var body: some View {
         ZStack {
-            MainPage()
-                .opacity(changeToMain ? 1 : 0)
-                .animation(.easeInOut(duration: 0.7), value: changeToMain)
-
+            TabView{
+                MainPage()
+                    .opacity(changeToMain ? 1 : 0)
+                    .animation(.easeInOut(duration: 0.7), value: changeToMain)
+                    .tabItem{
+                        Image(systemName: "filemenu.and.selection")
+                    }
+            }
             LoginPage(changeToMain: self.$changeToMain)
                 .opacity(changeToMain ? 0 : 1)
                 .offset(y: changeToMain ? -UIScreen.main.bounds.height : 0)

@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+private enum InputBox{
+    case studentIdBox,passwordBox
+}
 
 struct LoginPage: View{
     @Environment(\.colorScheme) var colorScheme
@@ -19,6 +22,7 @@ struct LoginPage: View{
     @State private var loginFalseReason = ""
     @State private var isEditingID = false
     @State private var isEditingPassword = false
+    @FocusState private var box: InputBox?
     @ObservedObject var viewModel = LoginPageViewModel()
     
     var body: some View {
@@ -67,6 +71,14 @@ struct LoginPage: View{
                                 .frame(width: 300, height: 60)
                                 .background(colorScheme == .dark ? Color.gray.opacity(0.5) : Color.black.opacity(0.04))
                                 .cornerRadius(CGFloat(18))
+                                .submitLabel(.continue)
+                                .focused($box,equals: .studentIdBox)
+                                .onSubmit {
+                                    box = .passwordBox
+                                }
+                                .keyboardType(.numbersAndPunctuation)
+                            
+                            
                             SecureField("密碼",text: $password,onCommit: {
                                 isEditingPassword = false
                             })
@@ -77,6 +89,12 @@ struct LoginPage: View{
                                 .frame(width: 300, height: 60)
                                 .background(colorScheme == .dark ? Color.gray.opacity(0.5) : Color.black.opacity(0.04))
                                 .cornerRadius(CGFloat(18))
+                                .submitLabel(.done)
+                                .focused($box,equals: .passwordBox)
+                                .keyboardType(.asciiCapable)
+//                                .onSubmit {
+//                                    box = .passwordBox
+//                                }
                             
                             Toggle(isOn: $userAgree) {
                                 HStack{
@@ -117,7 +135,7 @@ struct LoginPage: View{
                         
                     }
                 }
-            }
+            }.scrollDismissesKeyboard(.immediately)
         }
     }
     struct APIResponse: Codable {
@@ -193,6 +211,8 @@ struct LoginPage: View{
 //                                    print(gradeData)
                                     
                                 }
+                                self.loginPass = true
+                                changeToMain = true
                             } else {
                                 DispatchQueue.main.async {
                                     self.loginFalse = true
