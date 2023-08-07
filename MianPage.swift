@@ -22,9 +22,9 @@ struct MainPage: View {
                                 .fontWeight(.medium)
                         }.padding(.leading,geo.size.width*(-0.45))
 //                        gradeDataTitle, id: \.self
-                        ForEach(0..<gradeDataScore.count, id:\.self) { num in
+                        ForEach(0..<1, id:\.self) { num in
                             NavigationLink {
-                                Text("hello")
+                                GradePage(gradeDataTitle: $gradeDataTitle, gradeDataScore: $gradeDataScore)
                             } label: {
                                 MainPageFunc(titleText: "分數",gradeScore: gradeDataScore[num],widthSize: Float(geo.size.width),heightSize: Float(geo.size.height),subTitleText:gradeDataTitle[num])
                             }
@@ -54,7 +54,7 @@ struct MainPage: View {
 struct MainPage_Previews: PreviewProvider {
     static var previews: some View {
         TabView{
-            MainPage(gradeDataTitle: .constant(["國語文",""]),gradeDataScore: .constant(["62","70"]))
+            MainPage(gradeDataTitle:.constant(["國語文", "英語文", "數學", "化學", "資訊科技", "英語閱讀", "電子學", "微處理機"]),gradeDataScore: .constant(["65", "38", "60", "22", "80", "39", "52", "50"]))
                 .tabItem{
                     Image(systemName: "filemenu.and.selection")
                 }

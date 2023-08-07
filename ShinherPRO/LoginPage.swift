@@ -151,6 +151,7 @@ struct LoginPage: View{
         let total: String
         let examTitle: String
         let examScores: [ExamScore]
+        
 
         enum CodingKeys: String, CodingKey {
             case code = "code"
@@ -206,12 +207,16 @@ struct LoginPage: View{
                             // 檢查 "code" 是否為 0，如果是則視為登入成功
                             if response.code == 0 {
                                 DispatchQueue.main.async {
+                                    gradeDataScore = []
+                                    gradeDataTitle = []
                                     for score in response.examScores {
                                         gradeDataTitle.append(score.examSubject)
                                         gradeDataScore.append(score.personalScore)
-                                        print(gradeDataScore)
+//                                        print(gradeDataTitle)
+//                                        print(gradeDataScore)
+//                                        print(gradeTitle)
+//                                        print(score.examSubject)
                                     }
-                                    
                                 }
                                 self.loginPass = true
                                 changeToMain = true
@@ -241,6 +246,6 @@ struct LoginPage: View{
 
 struct LoginPage_Previews: PreviewProvider{
     static var previews: some View{
-        LoginPage(changeToMain: .constant(true),gradeDataTitle: .constant([]),gradeDataScore: .constant([]))
+        LoginPage(changeToMain: .constant(true),gradeDataTitle:.constant([]),gradeDataScore:.constant([]))
     }
 }

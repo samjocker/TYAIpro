@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		220DD9B52A80AA9100E7902D /* GradePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220DD9B42A80AA9100E7902D /* GradePage.swift */; };
 		227F62332A6C2B8300610636 /* ShinherPROApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227F62322A6C2B8300610636 /* ShinherPROApp.swift */; };
 		227F62352A6C2B8300610636 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227F62342A6C2B8300610636 /* ContentView.swift */; };
 		227F62372A6C2B8400610636 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 227F62362A6C2B8400610636 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		220DD9B42A80AA9100E7902D /* GradePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradePage.swift; sourceTree = "<group>"; };
 		227F622F2A6C2B8300610636 /* ShinherPRO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShinherPRO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		227F62322A6C2B8300610636 /* ShinherPROApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShinherPROApp.swift; sourceTree = "<group>"; };
 		227F62342A6C2B8300610636 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			children = (
 				227F62322A6C2B8300610636 /* ShinherPROApp.swift */,
 				227F62342A6C2B8300610636 /* ContentView.swift */,
+				220DD9B42A80AA9100E7902D /* GradePage.swift */,
 				228542462A74AAD600A71D3B /* LoginPage.swift */,
 				227F62362A6C2B8400610636 /* Assets.xcassets */,
 				227F62382A6C2B8400610636 /* Preview Content */,
@@ -266,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				220DD9B52A80AA9100E7902D /* GradePage.swift in Sources */,
 				228542472A74AAD600A71D3B /* LoginPage.swift in Sources */,
 				227F62352A6C2B8300610636 /* ContentView.swift in Sources */,
 				228542412A70130200A71D3B /* mainPage.swift in Sources */,

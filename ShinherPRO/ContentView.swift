@@ -13,8 +13,8 @@ class LoginPageViewModel: ObservableObject {
 
 struct ContentView: View {
     @State var changeToMain = false
-    @State var gradeDataTitle:[String] = []
-    @State var gradeDataScore:[String] = []
+    @State var gradeDataTitle:[String] = [""]
+    @State var gradeDataScore:[String] = [""]
     var body: some View {
         ZStack {
             TabView{
