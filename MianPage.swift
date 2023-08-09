@@ -10,10 +10,14 @@ import SwiftUI
 struct MainPage: View {
     @Binding var gradeDataTitle:[String]
     @Binding var gradeDataScore:[String]
+    @Binding var gradeDataTotal:String
+//    @Binding var gradeData:[String:[String]]
     var body: some View {
         GeometryReader{ geo in
             NavigationView{
                 ZStack{
+//                    Color(UIColor.systemBackground).edgesIgnoringSafeArea(.all)
+                    
                     Color.gray.opacity(0.09).edgesIgnoringSafeArea(.all)
                     ScrollView{
                         VStack(alignment: .leading){
@@ -24,26 +28,15 @@ struct MainPage: View {
 //                        gradeDataTitle, id: \.self
                         ForEach(0..<1, id:\.self) { num in
                             NavigationLink {
-                                GradePage(gradeDataTitle: $gradeDataTitle, gradeDataScore: $gradeDataScore)
+                                GradePage(gradeDataTitle: $gradeDataTitle, gradeDataScore: $gradeDataScore,gradeDataTotal: $gradeDataTotal)
+                                    .navigationTitle("成績")
+                                    .navigationBarTitleDisplayMode(.inline)
+//                                    Text("hello")
                             } label: {
-                                MainPageFunc(titleText: "分數",gradeScore: gradeDataScore[num],widthSize: Float(geo.size.width),heightSize: Float(geo.size.height),subTitleText:gradeDataTitle[num])
+                                MainPageFunc(titleText: "最新成績",gradeScore: gradeDataScore[num],widthSize: Float(geo.size.width),heightSize: Float(geo.size.height),subTitleText:gradeDataTitle[num])
+//                                Text("hello")
                             }
                         }
-//                        ForEach(1..<8) { i in
-//                            if i == 2 || i == 4 {
-//                                NavigationLink {
-//                                    Text("hello")
-//                                } label: {
-//                                    MainPageFunc(titleText: "分數",widthSize: Float(geo.size.width),heightSize: Float(geo.size.height),subTitleText:"國文")
-//                                }
-//                            }else{
-//                                NavigationLink {
-//                                    Text("hello")
-//                                } label: {
-//                                    MainPageFunc(titleText: "分數",widthSize: Float(geo.size.width),heightSize: Float(geo.size.height),subTitleText:"")
-//                                }
-//                            }
-//                        }
                     }.navigationBarTitle(Text("首頁"))
                 }
             }
@@ -54,9 +47,9 @@ struct MainPage: View {
 struct MainPage_Previews: PreviewProvider {
     static var previews: some View {
         TabView{
-            MainPage(gradeDataTitle:.constant(["國語文", "英語文", "數學", "化學", "資訊科技", "英語閱讀", "電子學", "微處理機"]),gradeDataScore: .constant(["65", "38", "60", "22", "80", "39", "52", "50"]))
+            MainPage(gradeDataTitle:.constant(["國語文", "英語文", "數學", "化學", "資訊科技", "英語閱讀", "電子學", "微處理機"]),gradeDataScore: .constant(["65", "38", "60", "22", "80", "39", "52", "50"]),gradeDataTotal: .constant("1253"))
                 .tabItem{
-                    Image(systemName: "filemenu.and.selection")
+                    Image(systemName: "square.text.square.fill")
                 }
         }
     }
@@ -82,7 +75,7 @@ struct MainPageFunc:View{
             VStack(alignment: .leading){
                 HStack{
                     Label(titleText,systemImage: "text.book.closed.fill")
-                        .foregroundColor(Color(red: 0.0, green: 0.803921568627451, blue: 0.803921568627451))
+                        .foregroundColor(.mint)
                     Spacer()
                     Image(systemName: "chevron.forward")
                         .foregroundColor(Color.gray)
@@ -116,7 +109,6 @@ struct MainPageFunc:View{
                 }
 //                .border(Color.red,width: 5)
             }.padding(.horizontal,40)
-            
         }.padding(.vertical,0)
         .frame(height: 120)
 //        .border(Color.yellow,width:4)

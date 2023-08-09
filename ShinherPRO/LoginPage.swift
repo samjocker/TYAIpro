@@ -26,6 +26,8 @@ struct LoginPage: View{
     @ObservedObject var viewModel = LoginPageViewModel()
     @Binding var gradeDataTitle:[String]
     @Binding var gradeDataScore:[String]
+    @Binding var gradeDataTotal:String
+//    @Binding var gradeData:[String:[String]]
     
     var body: some View {
 
@@ -209,14 +211,21 @@ struct LoginPage: View{
                                 DispatchQueue.main.async {
                                     gradeDataScore = []
                                     gradeDataTitle = []
+                                    print(response.total)
+                                    gradeDataTotal = response.total
+//                                    gradeData = ["title":[],"score":[],"total":[]]
+//                                    gradeData["toatal"]?.append(response.total)
                                     for score in response.examScores {
                                         gradeDataTitle.append(score.examSubject)
                                         gradeDataScore.append(score.personalScore)
+//                                        gradeData["title"]?.append(score.examSubject)
+//                                        gradeData["score"]?.append(score.personalScore)
 //                                        print(gradeDataTitle)
 //                                        print(gradeDataScore)
 //                                        print(gradeTitle)
 //                                        print(score.examSubject)
                                     }
+//                                    print(gradeData)
                                 }
                                 self.loginPass = true
                                 changeToMain = true
@@ -246,6 +255,28 @@ struct LoginPage: View{
 
 struct LoginPage_Previews: PreviewProvider{
     static var previews: some View{
-        LoginPage(changeToMain: .constant(true),gradeDataTitle:.constant([]),gradeDataScore:.constant([]))
+        LoginPage(changeToMain: .constant(true),gradeDataTitle:.constant([]),gradeDataScore:.constant([]),gradeDataTotal: .constant(""))
     }
 }
+
+//DemoData: {
+//           'code': 0,
+//           '考試標題': '第一次段考',
+//           '學號': '013300',
+//           '姓名': '江西南',
+//           '班級': '電子二甲',
+//           '考試科目成績': [
+//               {'考試科目': '國語文', '個人成績': '65', '全班平均': '67.5'},
+//               {'考試科目': '英語文', '個人成績': '38', '全班平均': '53.05'},
+//               {'考試科目': '數學', '個人成績': '60', '全班平均': '60.13'},
+//               {'考試科目': '化學', '個人成績': '22', '全班平均': '65.08'},
+//               {'考試科目': '資訊科技', '個人成績': '80', '全班平均': '78.95'},
+//               {'考試科目': '英語閱讀', '個人成績': '39', '全班平均': '52.76'},
+//               {'考試科目': '電子學', '個人成績': '52', '全班平均': '50.39'},
+//               {'考試科目': '微處理機', '個人成績': '50', '全班平均': '48.63'}
+//           ],
+//           '總分': '9999',
+//           '平均': '88.80',
+//           '排名': '80',
+//           '科別排名': '160'
+//       }
